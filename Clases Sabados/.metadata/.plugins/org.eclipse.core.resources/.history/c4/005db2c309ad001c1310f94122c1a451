@@ -1,0 +1,41 @@
+/*
+ ============================================================================
+ Name        : sábados_ejercicio_01_01.c
+ Author      : Alejandro ALberto Martín Rozas
+ Version     :26/03/2022
+ Copyright   : Your copyright notice
+ Description : División H
+ ============================================================================
+ */
+
+/*Enuncianciado:
+ Ingresar números enteros, hasta que el usuario lo decida. Calcular y mostrar:
+a)El promedio de los números positivos.
+b)El promedio de los números negativos.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
+int main(void)
+{
+	int numeroIngresado;
+	int contadorIngresos;
+	char confirmarVueltas;
+
+	contadorIngresos=0;
+	confirmarVueltas='s';
+
+	while(confirmarVueltas=='s')
+	{
+		printf("/n Ingrese un numero");
+		scanf("/n %d",&numeroIngresado);
+		__fpurge(stdin);
+		printf("/n ¿desean continuar? s//n");
+		scanf("/n %c", &confirmarVueltas);
+	}
+	printf("/n %d", numeroIngresado);
+
+	return EXIT_SUCCESS;
+}

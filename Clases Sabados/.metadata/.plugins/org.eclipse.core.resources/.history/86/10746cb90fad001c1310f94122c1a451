@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : sábados_ejercicio_01_02.c
+ Author      : Alejandro Alberto Martín Rozas
+ Version     : 26/03/2022
+ Copyright   : 
+ Description : Ejercicio 2
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts(""); /* prints  */
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,66 @@
+/*
+ ============================================================================
+ Name        : sábados_ejercicio_01_01.c
+ Author      : Alejandro ALberto Martín Rozas
+ Version     :26/03/2022
+ Copyright   : Your copyright notice
+ Description : División H
+ ============================================================================
+ */
+
+/*Enuncianciado:
+ Ingresar números enteros, hasta que el usuario lo decida. Calcular y mostrar:
+a)El promedio de los números positivos.
+b)El promedio de los números negativos.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
+int main(void)
+{
+	int numeroIngresado;
+	int contadorIngresosPositivos;
+	int contadorIngresosNegativos;
+	int acumuladorNumerosPositivos;
+	int acumuladorNumerosNegativos;
+	float promedioPositivos;
+	float promedioNegativos;
+	char confirmarVueltas;
+
+	contadorIngresosPositivos=0;
+	contadorIngresosNegativos=0;
+	acumuladorNumerosPositivos=0;
+	acumuladorNumerosNegativos=0;
+
+	confirmarVueltas='s';
+
+	while(confirmarVueltas=='s')
+	{
+		printf("Ingrese un numero:");
+		scanf("%d", &numeroIngresado);
+		if(numeroIngresado>0)
+		{
+			acumuladorNumerosPositivos=acumuladorNumerosPositivos+numeroIngresado;
+			contadorIngresosPositivos=contadorIngresosPositivos+1;
+		}
+		else
+		{
+			acumuladorNumerosNegativos=acumuladorNumerosNegativos+numeroIngresado;
+			contadorIngresosNegativos=contadorIngresosNegativos+1;
+		}
+		__fpurge(stdin); //stdin es standard input, entrada estandard
+		printf("¿desean continuar? s/n: ");
+		scanf("%c", &confirmarVueltas);
+	}
+
+	promedioPositivos=(float)acumuladorNumerosPositivos/contadorIngresosPositivos;
+	promedioNegativos=(float)acumuladorNumerosNegativos/contadorIngresosNegativos;
+
+	printf("El promedio de números positivos es: %f",promedioPositivos);
+	printf("El promedio de números negativos es: %f",promedioNegativos);
+
+
+	return EXIT_SUCCESS;
+}

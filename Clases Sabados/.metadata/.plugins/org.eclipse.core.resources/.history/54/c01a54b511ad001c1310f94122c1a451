@@ -1,0 +1,22 @@
+/*
+ ============================================================================
+ Name        : sábados_ejercicio_01_02.c
+ Author      : Alejandro Alberto Martín Rozas
+ Version     : 26/03/2022
+ Copyright   : 
+ Description : Ejercicio 2
+ ============================================================================
+ */
+
+/*
+Ingresar 5 números. Determinar cuál es el máximo y el mínimo e indicar en qué orden fue ingresado.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+
+	return EXIT_SUCCESS;
+}
