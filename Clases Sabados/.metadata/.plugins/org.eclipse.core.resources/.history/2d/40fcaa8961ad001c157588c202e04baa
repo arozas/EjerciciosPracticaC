@@ -27,8 +27,10 @@ int main(void)
 
 	contadorVueltas = 0;
 	banderaPrimero=1;
-	printf("ESTE PROGRAMA DETERMINA MAXIMOS Y MININIMOS INGRESADOS \n");
-	printf("Y EL ORDEN EN QUE FUERON INGRESADOS \n");
+	ordenIngresoMaximo=1;
+	ordenIngresoMinimo=1;
+	printf("//Este programa determina maximos y minimos enteros//. \n");
+
 	while(contadorVueltas<5)
 	{
 		printf("Ingrese un numero:");
@@ -44,14 +46,14 @@ int main(void)
 			if(numeroIngresado>numeroMaximo)
 			{
 				numeroMaximo=numeroIngresado;
-				ordenIngresoMaximo=contadorVueltas+1;
+				ordenIngresoMaximo=contadorVueltas;
 			}
 			else
 			{
 				if(numeroIngresado<numeroMinimo)
 				{
 					numeroMinimo=numeroIngresado;
-					ordenIngresoMinimo=contadorVueltas+1;
+					ordenIngresoMinimo=contadorVueltas;
 				}
 			}
 		}
